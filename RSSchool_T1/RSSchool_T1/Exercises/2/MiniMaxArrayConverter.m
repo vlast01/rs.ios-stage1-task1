@@ -9,12 +9,12 @@
     NSNumber* min = [array valueForKeyPath:@"@min.self"];
     
     NSMutableArray<NSNumber*>* result = [NSMutableArray arrayWithCapacity:2];
-
+    
     NSInteger sum = 0;
     for (NSNumber *num in array) {
-      sum += [num intValue];
+        sum += [num intValue];
     }
-
+    
     [result addObject:@(sum - [max intValue])];
     [result addObject:@(sum - [min intValue])];
     

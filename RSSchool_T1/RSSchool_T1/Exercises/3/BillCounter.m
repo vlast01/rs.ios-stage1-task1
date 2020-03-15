@@ -4,10 +4,10 @@
 
 // Complete the following fuction
 - (NSString*)compareResultForBill:(NSArray<NSNumber*>*)bill notIncludingElementWithIndex:(NSInteger)index withGivenSum:(NSNumber*)sum {
-   
+    
     NSInteger totalPrice = 0;
     for (NSNumber *num in bill) {
-      totalPrice += [num intValue];
+        totalPrice += [num intValue];
     }
     
     NSInteger correctBill = totalPrice - [[bill objectAtIndex:index] intValue];
