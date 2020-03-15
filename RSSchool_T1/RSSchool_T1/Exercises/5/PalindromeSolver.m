@@ -27,7 +27,6 @@
         else if ([index containsObject:[NSNumber numberWithInt:i]] && [k intValue]>counter && [[NSNumber numberWithChar:[s characterAtIndex:i]] intValue]!=9 && [[NSNumber numberWithChar:[s characterAtIndex:([n intValue]-i-1)]] intValue]!=9) {
             [result replaceCharactersInRange:NSMakeRange(i, 1) withString:@"9"];
             [result replaceCharactersInRange:NSMakeRange(([n intValue]-i-1), 1) withString:@"9"];
-            NSLog(@"AAA");
             counter--;
         }
         
@@ -35,11 +34,9 @@
         else if ([index containsObject:[NSNumber numberWithInt:i]] && [k intValue]==counter){
             if ([[NSNumber numberWithChar:[s characterAtIndex:i]] intValue]<[[NSNumber numberWithChar:[s characterAtIndex:([n intValue]-i-1)]] intValue]){
                        [result replaceCharactersInRange:NSMakeRange(i, 1) withString: [NSString stringWithFormat:@"%C", [s characterAtIndex:([n intValue]-i-1)]]];
-                 NSLog(@"BBB");
             }
                    else {
                        [result replaceCharactersInRange:NSMakeRange(([n intValue]-i-1), 1) withString:[NSString stringWithFormat:@"%C", [s characterAtIndex:i]]];
-                        NSLog(@"CCC");
                    }
                    counter--;
                }
@@ -49,14 +46,8 @@
         }
       
        }
-     NSLog(@"%@", result);
     return result;
-   
-    
-    
-    
-    
-    return @"";
+
 }
 
 @end
